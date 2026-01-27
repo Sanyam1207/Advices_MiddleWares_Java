@@ -8,7 +8,7 @@ public class Vehicle {
     public void setName(String name) {
         this.name = name;
     }
-    @PostConstruct
+//    @PostConstruct
     public void initialise(){
         this.name = "Sanyam";
         System.out.println("hogya bhai post construct wala kaam");

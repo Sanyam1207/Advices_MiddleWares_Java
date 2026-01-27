@@ -10,10 +10,17 @@ import org.springframework.context.annotation.Configuration;
 
 public class ProjectConfig {
 
-    @Bean
+    @Bean ("Audi 8")
     Vehicle vehicle(){ // Bhai method ka jo name hai same jaega spring ke context ke andar vo naam
         var veh = new Vehicle();
         veh.setName("Audi 8");
+        return veh;
+    }
+
+    @Bean(name = "Pagani")
+    Vehicle vehicle2(){ // Bhai method ka jo name hai same jaega spring ke context ke andar vo naam
+        var veh = new Vehicle();
+        veh.setName("Pagani");
         return veh;
     }
 

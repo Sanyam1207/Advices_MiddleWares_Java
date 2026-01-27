@@ -15,8 +15,10 @@ public class Example1 {
         // Upar wali line hi bhai IoC container ko intialise karne ke liye responsible hai
         // please consider all the config inside th ProjectConfig class
 
-        Vehicle vehh = context.getBean(Vehicle.class);
+        Vehicle vehh = context.getBean("Audi 8", Vehicle.class);
+        Vehicle vehh2 = context.getBean("Pagani", Vehicle.class);
         // getBean takes the param as to data type kya hai jo bean chahiye uska
+        System.out.println("Vehicle from beans using name " + vehh2.getName());
         System.out.println("Vehicle from beans " + vehh.getName());
     }
 

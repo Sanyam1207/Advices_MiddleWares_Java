@@ -3,22 +3,19 @@ package com.example.main;
 import com.example.beans.Person;
 import com.example.beans.Vehicle;
 import com.example.config.ProjectConfig;
-import org.springframework.beans.BeansException;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 
-import java.util.Random;
-import java.util.function.Supplier;
-
-public class Example4 {
+public class Example5 {
 
     public static void main(String[] args) {
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
         Person person = context.getBean(Person.class);
         Vehicle vehicle = context.getBean(Vehicle.class);
+//        Person sanyam_pandey = context.getBean("person_with_method_params", Person.class);
         System.out.println("Person bean " + person.getVehicle().getName() + "  " + person.getName());
         System.out.println(" vehicle " + vehicle.getName());
+//        System.out.println("\n\n New person with method " + sanyam_pandey.getVehicle().getName() + " and name is " + sanyam_pandey.getName());
 //        Vehicle volkswagen = new Vehicle();
 //        volkswagen.setName("Volkswagen");
 //        Supplier<Vehicle> volkswaegnSupplier = () -> volkswagen;

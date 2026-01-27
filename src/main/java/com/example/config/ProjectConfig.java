@@ -13,18 +13,28 @@ import org.springframework.context.annotation.Primary;
 @ComponentScan(basePackages = "com.example.beans") //Bhai ye component bnn jaega beans ka isme @Beans annotation use karne ki jroort ni pdegi
 
 public class ProjectConfig {
-    @Bean
-    public Vehicle vehicle(){
-        Vehicle vehicle = new Vehicle();
-        vehicle.setName("BMW");
-        return vehicle;
-    }
-
-    @Bean
-    public Person person(){
-        Person person = new Person();
-        person.setName("Sanyam");
-        person.setVehicle(vehicle());
-        return person;
-    }
+//    @Bean
+//    public Vehicle vehicle(){
+//        Vehicle vehicle = new Vehicle();
+//        vehicle.setName("BMW");
+//        return vehicle;
+//    }
+//
+//    @Bean
+//    @Primary
+//    // By using a method
+//    public Person person(){
+//        Person person = new Person();
+//        person.setName("Sanyam");
+//        person.setVehicle(vehicle());
+//        return person;
+//    }
+//
+//    @Bean(name = "person_with_method_params")
+//    public Person person2(Vehicle vehicle){
+//        Person sanyam = new Person();
+//        sanyam.setName("Sanyam Pandey \n\n");
+//        sanyam.setVehicle(vehicle);
+//        return sanyam;
+//    }
 }

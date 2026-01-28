@@ -26,6 +26,7 @@ public class Person {
         Name = name;
     }
 
+    @Autowired // Yaha bhi ho sakta hai autowiring lekin prod ready nahi hai
     public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
     }

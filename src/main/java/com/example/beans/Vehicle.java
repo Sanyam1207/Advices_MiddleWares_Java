@@ -13,13 +13,13 @@ public class Vehicle {
     public Vehicle(VehicleServices vehicleServices){
         this.vehicleServices = vehicleServices;
     }
+
+    public VehicleServices getVehicleServices() {
+        return vehicleServices;
+    }
+
     public void setName(String name) {
         this.name = name;
-    }
-//    @PostConstruct
-    public void initialise(){
-        this.name = "Sanyam";
-        System.out.println("hogya bhai post construct wala kaam");
     }
 
     public String getName() {

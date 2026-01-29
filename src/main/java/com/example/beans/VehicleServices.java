@@ -15,7 +15,7 @@ public class VehicleServices {
         System.out.println("Playing some of the melodies " + music);
     }
 
-    public void moveVehicle(){
+    public void moveVehicle(boolean vehicleStarted){
         String status = tyres.rotate();
         System.out.println("Tyres rotating " + status);
     }
